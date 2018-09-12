@@ -3566,11 +3566,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GIT\\Projekt\\AcceleratedLearning\\C#\\vecka 6\\CinemaEf\\CinemaEf\\CinemaEf.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Documents\\CinemaEF\\CinemaEf\\CinemaEf\\CinemaEf.csproj",
       "projectName": "CinemaEf",
-      "projectPath": "C:\\Users\\Administrator\\Documents\\GIT\\Projekt\\AcceleratedLearning\\C#\\vecka 6\\CinemaEf\\CinemaEf\\CinemaEf.csproj",
+      "projectPath": "C:\\Users\\Administrator\\Documents\\CinemaEF\\CinemaEf\\CinemaEf\\CinemaEf.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Documents\\GIT\\Projekt\\AcceleratedLearning\\C#\\vecka 6\\CinemaEf\\CinemaEf\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\Documents\\CinemaEF\\CinemaEf\\CinemaEf\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
