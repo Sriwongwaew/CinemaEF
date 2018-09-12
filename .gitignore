@@ -1,0 +1,18 @@
+# folders
+
+bin
+obj
+packages
+.vs
+
+# files
+
+*.user
+*.suo
+*.log
+Projekt1/ConsoleApp2/Properties/AssemblyInfo.cs
+Projekt1/ConsoleApp2/Program.cs
+Projekt1/ConsoleApp2/ConsoleApp2.sln
+Projekt1/ConsoleApp2/ConsoleApp2.csproj
+Projekt1/ConsoleApp2/App.config
+.gitattributes
