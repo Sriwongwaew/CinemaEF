@@ -33,5 +33,18 @@ namespace CinemaEf
 
             context.AddRange(genreAction, genreComedy, genreDrama, genreHorror, genreRomance, genreChild);
         }
+
+        public void AddCustomer()
+        {
+            Customer customer = new Customer
+            {
+                Name = "Isabelle Eriksson",
+                Mail = "ofinns@hotmail.com",
+                Password = "123",               
+            };
+
+            context.Customer.Add(customer);
+            context.SaveChanges();
+        }
     }
 }
