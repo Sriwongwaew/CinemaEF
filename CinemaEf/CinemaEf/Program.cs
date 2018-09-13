@@ -1,6 +1,7 @@
 ﻿using System;
+using CinemaEf;
 
-namespace CinemaEF
+namespace CinemaEf
 {
     class Program
     {
