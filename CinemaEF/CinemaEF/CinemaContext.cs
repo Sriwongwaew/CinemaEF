@@ -17,7 +17,6 @@ namespace CinemaEf
         public DbSet<Customer> Customer { get; set; }
         public DbSet<MovieType> MovieType { get; set; }
         public DbSet<Order> Order { get; set; }
-        public DbSet<OrderHistory> OrderHistory { get; set; }
         public DbSet<Salon> Salon { get; set; }
         public DbSet<Shows> Shows { get; set; }
         public DbSet<Ticket> Ticket { get; set; }

@@ -12,7 +12,8 @@ namespace CinemaEf
         public int TicketId { get; set; }
         public int Id { get; set; }
         public Ticket Ticket { get; set; }
-        
+        public Customer Customer { get; set; }
+
         public string DeliveryMethod { get; set; }
 
     }
