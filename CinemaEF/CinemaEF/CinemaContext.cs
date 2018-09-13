@@ -12,9 +12,9 @@ namespace CinemaEf
 {
     public class CinemaContext : DbContext
     {
-        public Cinema Cinema { get; set; }
-        public SalonInCinema SalonInCinema { get; set; }
-        public Location Location { get; set; }
+        public DbSet<Cinema> Cinema { get; set; }
+        public DbSet<SalonInCinema> SalonInCinema { get; set; }
+        public DbSet<Location> Location { get; set; }
         public DbSet<Movie> Movie { get; set; }
         public DbSet<Genre> Genre { get; set; }
         public DbSet<Customer> Customer { get; set; }
@@ -37,9 +37,11 @@ namespace CinemaEf
                 .HasKey(x => new { x.MovieId, x.GenreId });
 
             // Påverkar migration-script!
-
+            modelBuilder.Entity<SalonInCinema>().HasKey(x => new { x.CinemaId, x.SalonId });
 
             base.OnModelCreating(modelBuilder);
         }
+
+       
     }
 }
