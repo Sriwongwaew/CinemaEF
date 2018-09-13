@@ -8,6 +8,10 @@ namespace CinemaEf
 {
     public class AppAdd
     {
-        
+        // Här händer bara tilläggningar i SQL
+
+
+
+
     }
 }
