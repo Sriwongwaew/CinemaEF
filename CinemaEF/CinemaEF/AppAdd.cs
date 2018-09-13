@@ -71,7 +71,50 @@ namespace CinemaEf
 
         public void AddCinema()
         {
-            //.Cinema.Addrange();
+            context.Cinema.AddRange(new Cinema
+            {
+                Name = "Rigoletto",
+                Location = new Location
+                {
+                    Name = "Kungsgatan 16"
+                }
+            },
+            new Cinema
+            {
+                Name = "Filmstaden Heron City",
+                Location = new Location
+                {
+                    Name = "Dialoggatan 2"
+                }
+            },
+            new Cinema
+            {
+                Name = "Filmstaden Kista",
+                Location = new Location
+                {
+                    Name = "Kista Galleria"
+                }
+            },
+            new Cinema
+            {
+                Name = "Filmstaden Sergel",
+                Location = new Location
+                {
+                    Name = "Hötorget"
+                }
+            },
+            new Cinema
+            {
+                Name = "Filmstaden Scandinavia",
+                Location = new Location
+                {
+                    Name = "Mall of Scandinavia"
+                }
+            }
+            );
+
+            context.SaveChanges();
+
         }
     }
 }
