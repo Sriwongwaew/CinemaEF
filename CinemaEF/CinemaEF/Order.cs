@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CinemaEf;
 
-namespace CinemaEF
+namespace CinemaEf
 {
     public class Order
     {
