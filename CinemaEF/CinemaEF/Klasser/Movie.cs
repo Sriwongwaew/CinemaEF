@@ -16,5 +16,6 @@ namespace CinemaEf
         public TimeSpan Length { get; set; }
         public string Language { get; set; }
         public string Subtitles { get; set; }
+        public MovieType MovieType { get; set; }
     }
 }
