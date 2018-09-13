@@ -80,11 +80,20 @@ namespace CinemaEf
             {
                 Name = "Isabelle Eriksson",
                 Mail = "ofinns@hotmail.com",
-                Password = "123",               
+                Password = "123",
             };
 
             context.Customer.Add(customer);
             context.SaveChanges();
+        }
+        public void AddGenre()
+        {
+            var genreAction = new Genre { Name = "Action" };
+            var genreComedy = new Genre { Name = "Comedy" };
+            var genreDrama = new Genre { Name = "Drama" };
+            var genreHorror = new Genre { Name = "Horror" };
+            var genreRomance = new Genre { Name = "Romance" };
+
         }
     }
 }
