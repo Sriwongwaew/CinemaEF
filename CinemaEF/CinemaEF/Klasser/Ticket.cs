@@ -12,5 +12,6 @@ namespace CinemaEf
         public int Id { get; set; }
         public int ShowId { get; set; }
         public Shows Shows { get; set; }
+        public Order Order { get; set; }
     }
 }
