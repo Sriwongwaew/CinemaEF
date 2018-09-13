@@ -8,10 +8,17 @@ namespace CinemaEf
 {
     public class AppAdd
     {
+        static CinemaContext context = new CinemaContext();
+
         // Här händer bara tillägg i SQL
         public void Run()
         {
+            AddCinema();
 
+        }
+
+        private void AddCinema()
+        {
 
         }
     }
