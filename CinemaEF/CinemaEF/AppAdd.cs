@@ -13,8 +13,10 @@ namespace CinemaEf
         // Här händer bara tillägg i SQL
         public void Run()
         {
-            AddCinema();
-            AddMovies();
+            AddGenre();
+            //AddCinema();
+            //AddMovies();
+           // AddCinema();
 
         }
 
@@ -93,6 +95,9 @@ namespace CinemaEf
             var genreDrama = new Genre { Name = "Drama" };
             var genreHorror = new Genre { Name = "Horror" };
             var genreRomance = new Genre { Name = "Romance" };
+
+            context.AddRange(genreAction, genreComedy, genreDrama, genreHorror, genreRomance);
+            context.SaveChanges();
 
         }
     }
