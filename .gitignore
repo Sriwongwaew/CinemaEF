@@ -1,4 +1,12 @@
-*.suo
+# folders
+
 bin
 obj
-*.vs
+packages
+.vs
+
+# files
+
+*.user
+*.suo
+*.log
