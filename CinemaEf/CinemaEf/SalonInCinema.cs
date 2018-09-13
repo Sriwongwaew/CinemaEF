@@ -8,6 +8,10 @@ namespace CinemaEf
 {
     public class SalonInCinema
     {
-        
+        public int SalonId { get; set; }
+        public Salon Salon { get; set; }
+
+        public int CinemaId { get; set; }
+        public Cinema Cinema { get; set; }
     }
 }
