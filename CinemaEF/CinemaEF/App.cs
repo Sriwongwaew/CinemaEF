@@ -30,7 +30,6 @@ namespace CinemaEf
                 switch (command)
                 {
                     case ConsoleKey.D1: MainMenu(); break;
-
                     case ConsoleKey.D9: break;
 
                     default:
