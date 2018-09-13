@@ -38,7 +38,11 @@ namespace CinemaEf
                     AgeLevel = 15,
                     Length = 108,
                     Language = "Engelska",
-                    Subtitles = "Svenska"
+                    Subtitles = "Svenska",
+                    MovieType = new MovieType
+                    {
+                        Type = "IMAX"
+                    }
                 }, new Movie
                 {
                     Name = "Unga Astrid",
@@ -54,7 +58,11 @@ namespace CinemaEf
                     AgeLevel = 7,
                     Length = 123,
                     Language = "Svenska",
-                    Subtitles = "Svenska"
+                    Subtitles = "Svenska",
+                    MovieType = new MovieType
+                    {
+                        Type = "3D IMAX"
+                    }
                 });
 
                 context.SaveChanges();
