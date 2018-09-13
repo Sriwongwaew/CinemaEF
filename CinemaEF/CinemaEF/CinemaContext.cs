@@ -5,9 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CinemaEf.Klasser;
 
 
-namespace CinemaEF
+namespace CinemaEf
 {
     public class CinemaContext : DbContext
     {
@@ -20,12 +21,23 @@ namespace CinemaEF
         public DbSet<Salon> Salon { get; set; }
         public DbSet<Shows> Shows { get; set; }
         public DbSet<Ticket> Ticket { get; set; }
+        public DbSet<MovieGenre> MovieGenres { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
               "Server = (localdb)\\mssqllocaldb; Database = CinemaEf;");
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MovieGenre>()
+                .HasKey(x => new { x.MovieId, x.GenreId });
+
+            // Påverkar migration-script!
+
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
