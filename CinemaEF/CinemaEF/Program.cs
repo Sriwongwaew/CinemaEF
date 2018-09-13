@@ -7,10 +7,9 @@ namespace CinemaEf
     {
         private static CinemaContext context = new CinemaContext();
 
-
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            new App().Run();
         }
     }
 }
