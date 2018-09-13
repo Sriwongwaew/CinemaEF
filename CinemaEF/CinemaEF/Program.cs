@@ -10,7 +10,7 @@ namespace CinemaEf
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            AppAdd.Run();
         }
     }
 }
