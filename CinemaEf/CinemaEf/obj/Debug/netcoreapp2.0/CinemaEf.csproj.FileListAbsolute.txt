@@ -1,8 +1,0 @@
-C:\Users\Administrator\Documents\GIT\Projekt\AcceleratedLearning\C#\vecka 6\CinemaEf\CinemaEf\bin\Debug\netcoreapp2.0\CinemaEf.deps.json
-C:\Users\Administrator\Documents\GIT\Projekt\AcceleratedLearning\C#\vecka 6\CinemaEf\CinemaEf\bin\Debug\netcoreapp2.0\CinemaEf.runtimeconfig.json
-C:\Users\Administrator\Documents\GIT\Projekt\AcceleratedLearning\C#\vecka 6\CinemaEf\CinemaEf\bin\Debug\netcoreapp2.0\CinemaEf.runtimeconfig.dev.json
-C:\Users\Administrator\Documents\GIT\Projekt\AcceleratedLearning\C#\vecka 6\CinemaEf\CinemaEf\bin\Debug\netcoreapp2.0\CinemaEf.dll
-C:\Users\Administrator\Documents\GIT\Projekt\AcceleratedLearning\C#\vecka 6\CinemaEf\CinemaEf\obj\Debug\netcoreapp2.0\CinemaEf.csprojAssemblyReference.cache
-C:\Users\Administrator\Documents\GIT\Projekt\AcceleratedLearning\C#\vecka 6\CinemaEf\CinemaEf\obj\Debug\netcoreapp2.0\CinemaEf.csproj.CoreCompileInputs.cache
-C:\Users\Administrator\Documents\GIT\Projekt\AcceleratedLearning\C#\vecka 6\CinemaEf\CinemaEf\obj\Debug\netcoreapp2.0\CinemaEf.AssemblyInfoInputs.cache
-C:\Users\Administrator\Documents\GIT\Projekt\AcceleratedLearning\C#\vecka 6\CinemaEf\CinemaEf\obj\Debug\netcoreapp2.0\CinemaEf.AssemblyInfo.cs
