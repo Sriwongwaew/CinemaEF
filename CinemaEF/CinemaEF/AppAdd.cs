@@ -19,7 +19,7 @@ namespace CinemaEf
 
         public void AddCinema()
         {
-            context.Cinema.Addrange();
+            //context.Cinema.Addrange();
         }
     }
 }
