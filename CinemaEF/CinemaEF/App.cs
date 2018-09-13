@@ -20,7 +20,8 @@ namespace CinemaEf
                 Header("Välkommen till Rigoletto!");
 
                 Console.WriteLine("\nVad vill du göra?\n");
-                Console.WriteLine("A) Gå till huvudmenyn");
+                Console.WriteLine("1) Gå till huvudmenyn");
+                Console.WriteLine("9) Stäng ner programmet");
 
 
                 ConsoleKey command = Console.ReadKey().Key;
@@ -28,9 +29,9 @@ namespace CinemaEf
 
                 switch (command)
                 {
-                    case ConsoleKey.A: MainMenu(); break;
+                    case ConsoleKey.D1: MainMenu(); break;
 
-                    case ConsoleKey.Q: break;
+                    case ConsoleKey.D9: break;
 
                     default:
                         ErrorMessage("\nFelaktig input");
