@@ -17,7 +17,7 @@ namespace CinemaEf
         {
             while (true)
             {
-                Header("Välkommen till Rigoletto!");
+                Header("Välkommen till Filmstaden!");
 
                 Console.WriteLine("\nVad vill du göra?\n");
                 Console.WriteLine("1) Gå till huvudmenyn");
