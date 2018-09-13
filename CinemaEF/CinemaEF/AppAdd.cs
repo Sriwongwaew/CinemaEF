@@ -26,11 +26,12 @@ namespace CinemaEf
         {
             var genreAction = new Genre { Name = "Action" };
             var genreHorror = new Genre { Name = "Drama" };
-            var genreDrama = new Genre { Name = "Drama" };
+            var genreDrama = new Genre { Name = "Horror" };
             var genreRomance = new Genre { Name = "Romance" };
             var genreComedy = new Genre { Name = "Comedy" };
+            var genreChild = new Genre { Name = "Child" };
 
-            context.AddRange(genreAction, genreComedy, genreDrama, genreHorror, genreRomance);
+            context.AddRange(genreAction, genreComedy, genreDrama, genreHorror, genreRomance, genreChild);
         }
     }
 }
