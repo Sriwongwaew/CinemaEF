@@ -35,7 +35,7 @@ namespace CinemaEf
                     case ConsoleKey.D9: break;
 
                     default:
-                        ErrorMessage("\nFelaktig input");
+                        ErrorMessage("\nFelaktig input\n");
                         continue;
                 }
                 break;
@@ -54,14 +54,16 @@ namespace CinemaEf
 
             if (customer == null)
             {
-                ErrorMessage("\nFel input");
+                ErrorMessage("\nFelaktig input");
+                Login();
             }
 
             else
             {
+                Header("Välkommen " + customer.Name + "\n");
+
                 while (true)
                 {
-                    Header("Välkommen" + customer.Name);
                     Console.WriteLine("\nVad vill du göra?\n");
                     Console.WriteLine("1) Gå tillbaka till huvudmenyn");
                     Console.WriteLine("2) Se tillgängliga filmer");
@@ -83,6 +85,7 @@ namespace CinemaEf
                     break;
                 }
             }
+            
         }
 
         private string HideCharacter()
