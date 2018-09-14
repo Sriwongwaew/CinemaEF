@@ -13,9 +13,26 @@ namespace CinemaEf
         // Här händer bara tillägg i SQL
         public void Run()
         {
+            clearDatabse();
             AddCinema();
-            AddMovies();
             addSalons();
+
+
+        }
+
+        private void clearDatabse()
+        {
+            foreach (var item in context.Cinema)
+            {
+                context.Remove(item);
+            }
+
+            foreach (var item in context.Salon)
+            {
+                context.Remove(item);
+            }
+
+            context.SaveChanges();
 
         }
 
@@ -64,8 +81,8 @@ namespace CinemaEf
             context.SalonInCinema.AddRange(
                 new SalonInCinema
                 {
-                    SalonId = context.Salon.Where(x=> x.Name == "Salong 1",
-                    CinemaId = context.Cinema.Where(x=> x.Name == "Filmstaden Kista")
+                    Salon = context.Salon.Single(x=> x.Name == "Salong 1"),
+                    Cinema = context.Cinema.Single(x=> x.Name == "Rigoletto")
                 },
                 );
         }
@@ -74,26 +91,35 @@ namespace CinemaEf
         {
             using (var context = new CinemaContext())
             {
-                //context.Movie.AddRange(Movie1, Movie2);
-                context.Movie.AddRange(new Movie
+                context.Movie.AddRange(Movie1, Movie2);
+                context.SaveChanges();
+            }
+        }
+        private static Movie Movie1
+        {
+            get
+            {
+                return new Movie
                 {
                     Name = "The Predator",
                     Description = "Genetiskt uppgraderade med DNA från andra arter är universums farligaste jägare den här " +
                                   "gången starkare, smartare och dödligare än någonsin. När en ung pojke av misstag råkar trigga " +
                                   "deras återkomst till jorden kan bara ett gäng avdankade ex-soldater och en missnöjd NO-lärare förhindra slutet för mänskligheten.",
-                    Genre = new Genre
-                    {
-                        Name = "Action"
-                    },
+                    Genre = "Action",
                     AgeLevel = 15,
                     Length = 108,
                     Language = "Engelska",
-                    Subtitles = "Svenska",
-                    MovieType = new MovieType
-                    {
-                        Type = "IMAX"
-                    }
-                }, new Movie
+                    Subtitles = "Svenska"
+
+
+                };
+            }
+        }
+        private static Movie Movie2
+        {
+            get
+            {
+                return new Movie
                 {
                     Name = "Unga Astrid",
                     Description = "När Astrid Lindgren var väldigt ung hände något som påverkade henne fundamentalt, " +
@@ -152,16 +178,86 @@ namespace CinemaEf
                     }
                 });
 
-                context.SaveChanges();
-            }
-        }
-        
-       
+                new SalonInCinema
+                {
+                    Salon = context.Salon.Single(x => x.Name == "Salong 2"),
+                    Cinema = context.Cinema.Single(x => x.Name == "Rigoletto")
+                },
+                new SalonInCinema
+                {
+                    Salon = context.Salon.Single(x => x.Name == "Salong 3"),
+                    Cinema = context.Cinema.Single(x => x.Name == "Rigoletto")
+                },
+                new SalonInCinema
+                {
+                    Salon = context.Salon.Single(x => x.Name == "Salong 4"),
+                    Cinema = context.Cinema.Single(x => x.Name == "Rigoletto")
+                },
+                new SalonInCinema
+                {
+                    Salon = context.Salon.Single(x => x.Name == "Salong 1"),
+                    Cinema = context.Cinema.Single(x => x.Name == "Filmstaden Heron City")
+                },
+                new SalonInCinema
+                {
+                    Salon = context.Salon.Single(x => x.Name == "Salong 2"),
+                    Cinema = context.Cinema.Single(x => x.Name == "Filmstaden Heron City")
+                },
+                new SalonInCinema
+                {
+                    Salon = context.Salon.Single(x => x.Name == "Salong 3"),
+                    Cinema = context.Cinema.Single(x => x.Name == "Filmstaden Heron City")
+                },
+                new SalonInCinema
+                {
+                    Salon = context.Salon.Single(x => x.Name == "Salong 2"),
+                    Cinema = context.Cinema.Single(x => x.Name == "Filmstaden Kista")
+                },
+                new SalonInCinema
+                {
+                    Salon = context.Salon.Single(x => x.Name == "Salong 1"),
+                    Cinema = context.Cinema.Single(x => x.Name == "Filmstaden Kista")
+                },
+                new SalonInCinema
+                {
+                    Salon = context.Salon.Single(x => x.Name == "Salong 1"),
+                    Cinema = context.Cinema.Single(x => x.Name == "Filmstaden Sergel")
+                },
+                new SalonInCinema
+                {
+                    Salon = context.Salon.Single(x => x.Name == "Salong 2"),
+                    Cinema = context.Cinema.Single(x => x.Name == "Filmstaden Sergel")
+                },
+                new SalonInCinema
+                {
+                    Salon = context.Salon.Single(x => x.Name == "Salong 3"),
+                    Cinema = context.Cinema.Single(x => x.Name == "Filmstaden Sergel")
+                },
+                new SalonInCinema
+                {
+                    Salon = context.Salon.Single(x => x.Name == "Salong 1"),
+                    Cinema = context.Cinema.Single(x => x.Name == "Filmstaden Scandinavia")
+                },
+                new SalonInCinema
+                {
+                    Salon = context.Salon.Single(x => x.Name == "Salong 2"),
+                    Cinema = context.Cinema.Single(x => x.Name == "Filmstaden Scandinavia")
+                },
+                new SalonInCinema
+                {
+                    Salon = context.Salon.Single(x => x.Name == "Salong 3"),
+                    Cinema = context.Cinema.Single(x => x.Name == "Filmstaden Scandinavia")
+                },
+                new SalonInCinema
+                {
+                    Salon = context.Salon.Single(x => x.Name == "Salong 4"),
+                    Cinema = context.Cinema.Single(x => x.Name == "Filmstaden Scandinavia")
+                }
+                );
 
-        public void AddCinema()
-        {
-            //.Cinema.Addrange();
-        }
+            context.SaveChanges();
+
+
 
         public void AddCustomer()
         {
@@ -188,6 +284,9 @@ namespace CinemaEf
             context.SaveChanges();
 
         }
+
+
+
 
         public void AddCinema()
         {
