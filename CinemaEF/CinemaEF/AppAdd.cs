@@ -63,6 +63,43 @@ namespace CinemaEf
                     {
                         Type = "3D IMAX"
                     }
+                }, new Movie
+                {
+                    Name = "The Nun",
+                    Description = "När en ung nunna tar sitt liv på ett kloster i Rumänien skickar Vatikanen en präst och hans lärling för att utreda fallet. " +
+                    "Tillsammans avslöjar de den skrämmande hemligheten… De riskerar inte bara sina egna liv, utan även sin tro och sina själar, " +
+                    "då de tvingas konfrontera den onda kraften från den demoniska nunna som först skrämde världen i ”The Conjuring 2”..",
+                    Genre = new Genre
+                    {
+                        Name = "Horror"
+                    },
+                    AgeLevel = 15,
+                    Length = 97,
+                    Language = "Engelska",
+                    Subtitles = "Svenska",
+                    MovieType = new MovieType
+                    {
+                        Type = "IMAX"
+                    }
+                }, new Movie
+                {
+                    Name = "Superhjältarna 2",
+                    Description = "Allas vår favoritsuperhjältefamilj är tillbaka, men den här gången står mamma Helen i rampljuset, och pappa Bob stannar hemma med barnen Violet, " +
+                    "Dash och Jack-Jack för att göra hjälteinsatser i vardagslivet och försöka sköta allt som har med ett ”normalt” familjeliv att göra. Det är en tuff omställning för alla, " +
+                    "och det blir ännu tuffare, för ingen av dem har ännu en aning om lilla babyn Jack-Jacks alla superkrafter. När en ny skurk smider en genial och farlig plan måste " +
+                    "familjen tillsammans med Fryzo samarbeta igen, vilket är lättare sagt än gjort, även om de alla är superhjältar.",
+                    Genre = new Genre
+                    {
+                        Name = "Äventyr"
+                    },
+                    AgeLevel = 7,
+                    Length = 126,
+                    Language = "Engelska",
+                    Subtitles = "Svenska",
+                    MovieType = new MovieType
+                    {
+                        Type = "Standard"
+                    }
                 });
 
                 context.SaveChanges();
@@ -95,6 +132,7 @@ namespace CinemaEf
             var genreDrama = new Genre { Name = "Drama" };
             var genreHorror = new Genre { Name = "Horror" };
             var genreRomance = new Genre { Name = "Romance" };
+            var genreAdventure = new Genre { Name = "Äventyr" };
 
             context.AddRange(genreAction, genreComedy, genreDrama, genreHorror, genreRomance);
             context.SaveChanges();
