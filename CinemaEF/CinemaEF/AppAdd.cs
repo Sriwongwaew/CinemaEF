@@ -15,7 +15,59 @@ namespace CinemaEf
         {
             AddCinema();
             AddMovies();
+            addSalons();
 
+        }
+
+        private void addSalons()
+        {
+            context.Salon.AddRange(
+            new Salon
+            { Name = "Salong 1",
+            SeatingAmount = 50,
+            IsChildFriendly = false,
+            Has3D = true,
+            HasImax = true,
+            HasVIP = false
+            }, 
+            new Salon
+            {
+                Name = "Salong 2",
+                SeatingAmount = 100,
+                IsChildFriendly = true,
+                HasVIP = false,
+                HasImax = false,
+                Has3D = true
+            },
+            new Salon
+            {
+                Name = "Salong 3",
+                SeatingAmount = 80,
+                IsChildFriendly = true,
+                Has3D = true,
+                HasImax = false,
+                HasVIP = false
+            },
+            new Salon
+            {
+                Name = "Salong 4",
+                SeatingAmount = 120,
+                IsChildFriendly = false,
+                Has3D = true,
+                HasVIP = false,
+                HasImax = true
+            }
+            );
+
+            context.SaveChanges();
+
+            context.SalonInCinema.AddRange(
+                new SalonInCinema
+                {
+                    SalonId = context.Salon.Where(x=> x.Name == "Salong 1",
+                    CinemaId = context.Cinema.Where(x=> x.Name == "Filmstaden Kista")
+                },
+                );
         }
 
         private void AddMovies()
