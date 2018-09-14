@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CinemaEf;
+using CinemaEf.Klasser;
 
 namespace CinemaEf
 {
@@ -18,5 +18,6 @@ namespace CinemaEf
         public string Language { get; set; }
         public string Subtitles { get; set; }
         public MovieType MovieType { get; set; }
+        public List<MovieGenre> MovieGenres { get; set; }
     }
 }
