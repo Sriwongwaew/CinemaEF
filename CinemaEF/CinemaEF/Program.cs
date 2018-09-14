@@ -1,5 +1,6 @@
 ﻿using System;
 using CinemaEf;
+using Microsoft.EntityFrameworkCore;
 
 namespace CinemaEf
 {
@@ -16,10 +17,18 @@ namespace CinemaEf
 
         private static void ClearDatabase()
         {
-            foreach (var customer in context.Customer)
-            {
-                context.Remove(customer);
-            }
+            context.RemoveRange(context.Cinema);
+            context.RemoveRange(context.Customer);
+            context.RemoveRange(context.Genre);
+            context.RemoveRange(context.Location);
+            context.RemoveRange(context.Movie);
+            context.RemoveRange(context.MovieGenres);
+            context.RemoveRange(context.MovieType);
+            context.RemoveRange(context.Order);
+            context.RemoveRange(context.Salon);
+            context.RemoveRange(context.SalonInCinema);
+            context.RemoveRange(context.Shows);
+            context.RemoveRange(context.Ticket);
         }
     }
 }
