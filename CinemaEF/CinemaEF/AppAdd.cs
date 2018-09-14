@@ -176,6 +176,36 @@ namespace CinemaEf
                 Language = "Svenska",
                 Subtitles = "Svenska"
             };
+            var movie1 = new Movie
+            {
+                Name = "The Nun",
+                Description = "Jätte läskig film om en nunna som typ är ett spöke? Eller demon? Vad är ens skillnaden? Snälla säg inte 'Google is your friend' då blir jag arg och lite våldsam",
+                MovieGenres = new List<MovieGenre> { new MovieGenre { Genre = genreHorror } },
+                AgeLevel = 15,
+                Length = 97,
+                Language = "Engelska",
+                Subtitles = "Svenska"
+            };
+            var movie3 = new Movie
+            {
+                Name = "The Predator",
+                Description = "Jättecool film, tror vi, ingen har sett den, men verkar fan rätt schysst alltså. 5 av 5 hypotetiska brödrostar i betyg.",
+                MovieGenres = new List<MovieGenre> { new MovieGenre { Genre = genreAction }, new MovieGenre { Genre = genreHorror } },
+                AgeLevel = 15,
+                Length = 108,
+                Language = "Engelska",
+                Subtitles = "Svenska"
+            };
+            var movie4 = new Movie
+            {
+                Name = "Ensamma i rymden",
+                Description = "Animerad familjefilm. Två syskon blir vän med en utomjording. Kul.... 1 av 5 hypotetiska brödrostar i betyg",
+                MovieGenres = new List<MovieGenre> { new MovieGenre { Genre = genreAction }, new MovieGenre { Genre = genreHorror } },
+                AgeLevel = 7,
+                Length = 83,
+                Language = "Engelska",
+                Subtitles = "Svenska"
+            };
         }
         public void AddCustomer()
         {
