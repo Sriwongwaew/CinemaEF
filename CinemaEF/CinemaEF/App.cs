@@ -60,7 +60,7 @@ namespace CinemaEf
 
             else
             {
-                Header("Välkommen " + customer.Name + "\n");
+                Header("\nVälkommen " + customer.Name + "\n");
 
                 while (true)
                 {
@@ -75,7 +75,7 @@ namespace CinemaEf
                     switch (command)
                     {
                         case ConsoleKey.D1: MainMenu(); break;
-                        //case ConsoleKey.D2: WatchAvailableMpvies(); break;
+                        //case ConsoleKey.D2: WatchAvailableMovies(); break;
                         //case ConsoleKey.D3: BuyAndReserveTicket(); break;
 
                         default:
