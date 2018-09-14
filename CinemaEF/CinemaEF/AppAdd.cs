@@ -25,13 +25,14 @@ namespace CinemaEf
         {
             context.Salon.AddRange(
             new Salon
-            { Name = "Salong 1",
-            SeatingAmount = 50,
-            IsChildFriendly = false,
-            Has3D = true,
-            HasImax = true,
-            HasVIP = false
-            }, 
+            {
+                Name = "Salong 1",
+                SeatingAmount = 50,
+                IsChildFriendly = false,
+                Has3D = true,
+                HasImax = true,
+                HasVIP = false
+            },
             new Salon
             {
                 Name = "Salong 2",
@@ -66,10 +67,9 @@ namespace CinemaEf
             context.SalonInCinema.AddRange(
                 new SalonInCinema
                 {
-                    SalonId = context.Salon.Where(x=> x.Name == "Salong 1",
-                    CinemaId = context.Cinema.Where(x=> x.Name == "Filmstaden Kista")
-                },
-                );
+                    SalonId = context.Salon.Where(x => x.Name == "Salong 1",
+                    CinemaId = context.Cinema.Where(x => x.Name == "Filmstaden Kista")
+                )});
         }
 
         private void AddMovies()
@@ -97,14 +97,13 @@ namespace CinemaEf
                     AgeLevel = 15,
                     Length = 108,
                     Language = "Engelska",
-                    Subtitles = "Svenska"
-                   MovieType = new MovieType
+                    Subtitles = "Svenska",
+                    MovieType = new MovieType
                     {
                         Type = "IMAX"
                     }
-                }, new Movie
 
-              };
+                };
             }
         }
 
@@ -137,13 +136,11 @@ namespace CinemaEf
                     {
                         Type = "3D IMAX"
                     }
-                });
-
+                };
                 context.SaveChanges();
+
             }
         }
-        
-       
 
         public void AddCinema()
         {
@@ -192,7 +189,6 @@ namespace CinemaEf
             context.SaveChanges();
 
         }
-    }
         public void AddCustomer()
         {
             Customer customer = new Customer
@@ -218,6 +214,6 @@ namespace CinemaEf
             context.SaveChanges();
         }
     }
-}
 
+}
 
