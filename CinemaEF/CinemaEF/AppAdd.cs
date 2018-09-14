@@ -14,26 +14,9 @@ namespace CinemaEf
         // Här händer bara tillägg i SQL
         public void Run()
         {
-            clearDatabse();
             AddCinema();
             addSalons();
 
-
-        }
-
-        private void clearDatabse()
-        {
-            foreach (var item in context.Cinema)
-            {
-                context.Remove(item);
-            }
-
-            foreach (var item in context.Salon)
-            {
-                context.Remove(item);
-            }
-
-            context.SaveChanges();
 
         }
 
