@@ -8,9 +8,22 @@ namespace CinemaEf
 {
     public class App
     {
+        CinemaContext context = new CinemaContext();
+
         internal void Run()
         {
-            MainMenu();
+           // MainMenu();
+            DisplayAllCinemas();
+        }
+
+        private void DisplayAllCinemas()
+        {
+            Console.WriteLine(" Våra Biografer:".ToUpper()+ "\n");
+            foreach (var item in context.Cinema.Select(x => x.Name))
+            {
+                Console.WriteLine(" " + item);
+            }
+            
         }
 
         private void MainMenu()
