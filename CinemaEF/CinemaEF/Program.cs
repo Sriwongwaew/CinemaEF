@@ -9,8 +9,9 @@ namespace CinemaEf
 
         static void Main(string[] args)
         {
-            //new App().Run();
-            new AppAdd().Run();
+            new App().Run();
+            var appadd = new AppAdd();
+            appadd.Run();
         }
     }
 }
